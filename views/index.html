@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+  
+</head>
+<body>
+  <div id="editor"></div>
+  <div class="buttons-holder">
+    <button id="compile">Compile</button>
+    <button id="run">Run</button>
+  </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js"></script>
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+<!-- <script type="text/javascript" src="javascripts/script.js"></script> -->
+<script>
+  $(document).ready(function(){
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    $(document).on("click","#compile",function(){
+      $.ajax({
+        url : '/code/compile',
+        type : 'post',
+        data : 'code=' + JSON.stringify(editor.getValue()),
+        dataType : 'json',
+        success : function(data) {
+          alert(JSON.parse(data.message));
+        }
+      });
+    });
+    $(document).on("click","#run",function(){
+      $.ajax({
+        url : '/code/execute',
+        type : 'post',
+        data : 'code=' + JSON.stringify(editor.getValue()),
+        dataType : 'json',
+        success : function(data) {
+          //alert(JSON.parse(data.message));
+        }
+      });
+    });
+  });
+
+</script>
+
+</html>

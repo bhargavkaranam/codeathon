@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IECSE Codeathon</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/fa/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<script type="text/javascript" src="/javascripts/defiant.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js"></script>
+
+	<script type="text/javascript" src="/javascripts/jquery.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<script type="text/javascript" src="/javascripts/script.js"></script>
+</head>
+<body>
+	<div class="container">
+		<nav class="nav">
+			<img height="30" src="/images/flynava.png">
+			<h2>Codeathon</h2>
+			<div class="user-holder" align="right">
+				<i class="fa fa-question-circle-o fa-nav fa-3x" aria-hidden="true"></i>
+				<i class="fa fa-bell-o fa-nav fa-3x" aria-hidden="true"></i>
+				<div href="#" class="userteam">
+					<a class="username">&nbsp;</a>
+					<br>
+					<a class="teamname">&nbsp;</a>								
+				</div>
+				<img class="user" height="50" src="/images/user.svg">
+
+			</div>
+			<div class="menu-drawer">
+				<ul>
+				<li><a href="/logout/">Logout</a></li>
+				<li><a target="_blank" href="https://flynava.com">FlyNava</a></li>
+				<li><a target="_blank" href="https://iecsemanipal.com">IECSE</a></li>
+			</div>
+		</nav>
+		
+		<div class="question">
+			<div class="question-text">
+				<div>
+					
+				</div>
+			</div>
+			<footer class="question-buttons">
+
+				<button id="prev" class="qtoggle"><i class="fa fa-arrow-left"></i>Previous Question</button>
+				<button id="next" class="qtoggle">Next Question<i class="fa fa-arrow-right"></i></button>
+			</footer>
+		</div>
+		<div class="editor">
+			<div id="editor"></div>
+			<div class="editor-buttons">
+				<center>
+
+					<button class="file-upload">            
+						<input type="file" name="code[]" id="file-select" class="file-input">Choose File
+					</button>
+					<button id="submitcode">Submit Code</button>
+
+				</center>
+			</div>
+		</div>
+		<div class="hints-resources">	
+			<div class="test">
+				<center>
+					<i id="hints" class="fa fa-question-circle fa-2x toggleResources" aria-hidden="true"></i>
+					<br><br>
+					<i id="resources" class="fa fa-files-o fa-2x toggleResources" aria-hidden="true"></i>
+				</center>
+			</div>
+			<div class="desc">
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
